@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="my-form">
+    <div class="login-welcome-row">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1 id="welcome-title">Bienvenido</h1>
+    </div>
+    <!-- Aquí puedes agregar más contenido para el dashboard -->
+  </div>
+
+  <script>
+    // Función para obtener el valor de un parámetro en la URL
+    function getQueryParam(param) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+
+    // Leer el rol desde la URL (ej: dashboard.html?rol=funcionario)
+    const rol = getQueryParam('rol');
+
+    // Actualizar el mensaje de bienvenida según el rol recibido
+    if (rol) {
+      document.getElementById('welcome-title').textContent = `Bienvenido ${rol}`;
+    }
+  </script>
+</body>
+</html>
