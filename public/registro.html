@@ -38,10 +38,10 @@
         </div>
 
         <div class="password-field">
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" autocomplete="off" placeholder="*************"
-                required>
-            <div class="error-message">Contraseña en formato incorrecto</div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" minlength="8" pattern="[A-Za-z0-9]{8,}" required 
+                title="La contraseña debe tener al menos 8 caracteres y solo puede contener letras y números">
+            <span class="error-message">Debe contener al menos 8 caracteres sin caracteres especiales.</span>
         </div>
 
         
